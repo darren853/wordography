@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordography — Daily Geography Game Documentation</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #0a0a0a;
+            --green: #00ff88;
+            --blue: #0088ff;
+            --orange: #ff6600;
+            --accent: #00ff88;
+            --text: #ffffff;
+            --text-muted: #888888;
+            --card-bg: #111111;
+            --card-border: #222222;
+            --code-bg: #0d1117;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+        header {
+            background: var(--secondary);
+            padding: 30px;
+            border-bottom: 3px solid var(--green);
+            margin-bottom: 40px;
+        }
+
+        header h1 { font-size: 2rem; margin-bottom: 10px; }
+        header .brand { font-weight: 700; }
+        header .brand span.mo { color: var(--blue); }
+        header .brand span.bo { color: var(--green); }
+        header .brand span.zed { color: var(--orange); }
+        header .subtitle { color: var(--text-muted); }
+
+        nav {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--card-border);
+        }
+
+        nav h3 { color: var(--green); margin-bottom: 15px; }
+        nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 20px; }
+        nav a { color: var(--blue); text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+
+        h2 {
+            color: var(--green);
+            font-size: 1.5rem;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        h3 { color: var(--text); margin: 25px 0 10px 0; font-size: 1.1rem; }
+
+        p { margin-bottom: 15px; }
+
+        .tile-demo {
+            display: inline-flex;
+            gap: 6px;
+            margin: 10px 0;
+        }
+
+        .tile {
+            width: 44px;
+            height: 44px;
+            border: 2px solid #30363D;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text);
+        }
+
+        .tile.green { background: #6AAA64; border-color: #6AAA64; color: #fff; }
+        .tile.yellow { background: #FFB300; border-color: #FFB300; color: #fff; }
+        .tile.grey { background: #3A3A3C; border-color: #3A3A3C; color: #fff; }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .card h4 { color: var(--green); margin-bottom: 10px; }
+
+        code {
+            background: var(--code-bg);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--orange);
+        }
+
+        pre {
+            background: var(--code-bg);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            border-left: 3px solid var(--green);
+        }
+
+        pre code { background: none; padding: 0; color: var(--text); }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .feature-item h4 { color: var(--blue); margin-bottom: 8px; }
+        .feature-item p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            padding: 10px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        th { color: var(--green); border-bottom: 2px solid var(--green); }
+        td { color: var(--text-muted); }
+
+        .keyboard-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            max-width: 400px;
+            margin: 10px 0;
+        }
+
+        .key {
+            min-width: 36px;
+            height: 44px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 0 10px;
+        }
+
+        .key.green { background: #6AAA64; color: #fff; }
+        .key.yellow { background: #FFB300; color: #fff; }
+        .key.grey { background: #3A3A3C; color: #fff; }
+
+        .key.wide { min-width: 60px; font-size: 11px; }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--card-border);
+            margin-top: 60px;
+        }
+
+        footer a { color: var(--blue); }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <p class="brand"><span class="mo">Mo</span><span class="bo">Bo</span><span class="zed">Zed</span></p>
+        <h1>Wordography</h1>
+        <p class="subtitle">Daily Country Guessing Game — Developer & User Documentation</p>
+    </header>
+
+    <nav>
+        <h3>On This Page</h3>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#how-to-play">How to Play</a></li>
+            <li><a href="#gameplay">Gameplay Mechanics</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#development">Development</a></li>
+            <li><a href="#deployment">Deployment</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overview -->
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>Wordography is a daily geography guessing game — similar to Wordle but for country names. Players have 5 attempts to guess the target country based on geographic proximity hints.</p>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h4>🎯 One Puzzle Per Day</h4>
+                <p>A new country target is selected every 24 hours using a deterministic daily seed.</p>
+            </div>
+            <div class="feature-item">
+                <h4>📍 Distance Hints</h4>
+                <p>After each guess, you see directional arrows and distance in km to help narrow down the answer.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🗺️ Map Reveal</h4>
+                <p>The game's modal shows the target country's approximate location on a world map.</p>
+            </div>
+            <div class="feature-item">
+                <h4>♿ Color-Blind Mode</h4>
+                <p>Toggle color-blind friendly palette where green becomes blue and yellow becomes orange.</p>
+            </div>
+            <div class="feature-item">
+                <h4>📊 Statistics</h4>
+                <p>Tracks win rate, current/best streaks, guess distribution, and average distance.</p>
+            </div>
+            <div class="feature-item">
+                <h4>📋 Share Results</h4>
+                <p>Copy emoji grid results to clipboard for sharing on social media.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h4>Live URL</h4>
+            <p><code>http://192.168.0.2/wordography/</code></p>
+            <p style="margin-top:10px; color: var(--text-muted); font-size: 0.9rem;">Also accessible at <code>http://horizon/wordography/</code> on the local network.</p>
+        </div>
+    </section>
+
+    <!-- How to Play -->
+    <section id="how-to-play">
+        <h2>How to Play</h2>
+        <p>Your goal is to guess the hidden country in 5 tries or fewer.</p>
+
+        <h3>1. Enter Your Guess</h3>
+        <p>Type any country name using the on-screen keyboard or your physical keyboard. Press <strong>Enter</strong> to submit.</p>
+
+        <h3>2. Read the Proximity Hint</h3>
+        <p>After each guess, you'll see a directional arrow pointing toward the target country and the distance in kilometres.</p>
+
+        <h3>3. Tile Colors Reveal Your Guess Quality</h3>
+        <p>Each letter in your guess is coloured to indicate how close it is:</p>
+
+        <div class="tile-demo">
+            <div class="tile green">K</div>
+            <div class="tile yellow">Y</div>
+            <div class="tile grey">R</div>
+            <div class="tile grey">G</div>
+            <div class="tile grey">Y</div>
+            <div class="tile grey">Z</div>
+            <div class="tile grey">S</div>
+            <div class="tile grey">T</div>
+            <div class="tile grey">A</div>
+            <div class="tile grey">N</div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tile Color</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><div class="tile green" style="width:30px;height:30px;font-size:12px;">K</div></td>
+                    <td><strong>Green</strong> — This letter is correct and in the right position</td>
+                </tr>
+                <tr>
+                    <td><div class="tile yellow" style="width:30px;height:30px;font-size:12px;">Y</div></td>
+                    <td><strong>Yellow</strong> — This letter appears in the country's name but in a different position</td>
+                </tr>
+                <tr>
+                    <td><div class="tile grey" style="width:30px;height:30px;font-size:12px;">X</div></td>
+                    <td><strong>Grey</strong> — This letter is not in the country's name at all</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. Use the Keyboard</h3>
+        <p>The on-screen keyboard tracks which letters you've used. Green means a letter is confirmed, yellow means it exists elsewhere, grey means it has been eliminated.</p>
+
+        <div class="keyboard-demo">
+            <div class="key">Q</div><div class="key">W</div><div class="key">E</div><div class="key">R</div><div class="key">T</div><div class="key">Y</div><div class="key">U</div><div class="key">I</div><div class="key">O</div><div class="key">P</div>
+            <div class="key">A</div><div class="key">S</div><div class="key green">Z</div><div class="key">X</div><div class="key">C</div><div class="key">V</div><div class="key">B</div><div class="key">N</div><div class="key grey">M</div>
+            <div class="key wide">DEL</div>
+        </div>
+
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Z is green (used and correct), M is grey (eliminated).</p>
+
+        <h3>5. Win or Lose</h3>
+        <p>If you guess the country within 5 attempts, you win! If not, the answer is revealed. Either way, you get a new puzzle tomorrow at midnight GMT.</p>
+    </section>
+
+    <!-- Gameplay Mechanics -->
+    <section id="gameplay">
+        <h2>Gameplay Mechanics</h2>
+
+        <h3>Daily Target Selection</h3>
+        <p>The target country is chosen deterministically from today's date using a hash-based seed:</p>
+<pre><code>seed = 'wordography-' + TODAY  // e.g. 'wordography-2026-04-15'
+hash = 5381  // FNV-1a hash
+index = abs(hash) % countries.length  // filtered to countries with 4+ letter names</code></pre>
+        <p>This means every player worldwide gets the same country on the same day, and the same country will always produce the same result for a given date.</p>
+
+        <h3>Letter Evaluation (Wordle Algorithm)</h3>
+        <p>The game uses a standard Wordle-style evaluation:</p>
+        <ol style="margin: 10px 20px; color: var(--text-muted);">
+            <li style="margin-bottom:8px"><strong>First pass:</strong> Any letter that exactly matches the target position becomes <strong>green</strong> and is marked as used.</li>
+            <li style="margin-bottom:8px"><strong>Second pass:</strong> Remaining letters are checked against the target name. Any letter that exists in an unused position becomes <strong>yellow</strong>. Letters not in the target become <strong>grey</strong>.</li>
+        </ol>
+
+        <h3>Distance Calculation</h3>
+        <p>After each guess, the game calculates the great-circle distance using the Haversine formula:</p>
+<pre><code>hav(lat1, lon1, lat2, lon2)
+  → Returns distance in kilometres
+  → Also returns directional index (0-7) for arrow direction</code></pre>
+
+        <h3>Country Name Matching</h3>
+        <p>Guesses are matched against <code>normalizedName</code> fields (uppercase, spaces removed). The game uses the full official country name — e.g. "United States" not "USA". Multi-word country names are fully playable (e.g. "South Korea", "New Zealand").</p>
+
+        <h3>Keyboard State (kbState)</h3>
+        <p>The keyboard state tracks letter status across multiple guesses, upgraded as you play:</p>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li><strong>Green</strong> — confirmed letter in correct position (never downgraded)</li>
+            <li><strong>Yellow</strong> — letter exists in name but not confirmed (upgraded to green if later confirmed)</li>
+            <li><strong>Grey</strong> — letter not in target name</li>
+        </ul>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <h2>Features</h2>
+
+        <h3>Game Modes</h3>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li><strong>Daily Game</strong> — One puzzle per day, synced to midnight GMT</li>
+            <li><strong>State Persistence</strong> — Progress saved to localStorage; returns to today's game on revisit</li>
+            <li><strong>New Game Detection</strong> — If the saved date differs from today, state is cleared for a fresh puzzle</li>
+        </ul>
+
+        <h3>Keyboard Shortcuts</h3>
+        <table>
+            <thead>
+                <tr><th>Key</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>A-Z / Space</td><td>Type a letter</td></tr>
+                <tr><td>Enter</td><td>Submit guess</td></tr>
+                <tr><td>Backspace</td><td>Delete last letter</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Modals</h3>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li><strong>Win Modal</strong> — Shows result title (Perfect!/Brilliant!/etc.), flag, fun fact, share grid, copy button</li>
+            <li><strong>Loss Modal</strong> — Reveals answer and fun fact with share option</li>
+            <li><strong>Stats Modal</strong> — Played games, win %, current streak, best streak, guess distribution, average distance</li>
+            <li><strong>Help Modal</strong> — How-to-play summary</li>
+            <li><strong>Admire View</strong> — Full replay of all guessed rows after winning</li>
+        </ul>
+
+        <h3>Settings</h3>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li><strong>Color-Blind Mode</strong> — Toggles alternative palette: <code>--green:#58A6FF --yellow:#F78166</code></li>
+            <li><strong>Theme Toggle</strong> — Switch between dark and light themes</li>
+        </ul>
+
+        <h3>Share Results</h3>
+        <p>Results are shared as emoji grids:</p>
+<pre><code>WORDOGRAPHY 3/5
+🟩🟩🟩🟩🟩
+🟩🟩🟩🟩🟩
+🟩🟩🟩🟩🟩
+
+📍 1,247 km — Far</code></pre>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture">
+        <h2>Architecture</h2>
+
+        <h3>File Structure</h3>
+<pre><code>/var/www/horizon/wordography/
+└── index.html     Single-file application (~575KB)
+    ├── CSS        All styles inline in &lt;style&gt; block
+    ├── Countries  200+ country objects with lat/lon/flag/funFact
+    ├── JS         Game logic, state, rendering
+    └── Images     Inline base64 SVG country silhouette sprites</code></pre>
+
+        <h3>Country Data</h3>
+        <p>Each country object contains:</p>
+<pre><code>{
+  id: 'KGZ',
+  name: 'Kyrgyzstan',           // Display name
+  normalizedName: 'KYRGYZSTAN', // For matching (uppercase, no spaces)
+  lat: 41.2,                    // Latitude
+  lon: 75.8,                    // Longitude
+  continent: 'Asia',
+  flag: '🇰🇬',                  // Emoji flag
+  funFact: 'Kyrgyzstan has over 90 different ethnic groups.'
+}</code></pre>
+
+        <h3>Game State Object</h3>
+<pre><code>state = {
+  guesses: [{
+    name: 'KYRGYZSTAN',
+    eval: ['green', 'grey', 'grey', ...],  // Letter evaluations
+    km: 213,                               // Distance from target
+    di: 3,                                  // Direction index (0-7)
+    flag: '🇰🇬'
+  }, ...],
+  current: 'KYR',     // Currently typed letters
+  gameOver: false,
+  won: false,
+  _targetIdx: 42     // Internal: index into COUNTRIES array
+}</code></pre>
+
+        <h3>Stats Object</h3>
+<pre><code>stats = {
+  played: 0,                   // Total games played
+  won: 0,                      // Games won
+  currentStreak: 0,            // Consecutive wins
+  maxStreak: 0,                // Best streak ever
+  guessDistribution: [0,0,0,0,0,0],  // Wins by guess count (1-5, 6th index unused)
+  guessDistances: [],          // All distances for average calculation
+  lastPlayed: '2026-04-15'    // Date string
+}</code></pre>
+
+        <h3>CSS Tile Colour Variables</h3>
+<pre><code>:root {
+  --green:  #6AAA64   /* Correct letter, correct position */
+  --yellow: #FFB300   /* Letter exists but wrong position */
+  --grey:   #3A3A3C   /* Letter not in target name */
+  --amber:  #E3B341   /* Used for distance hints */
+}
+
+[data-cb=on] {           /* Color-blind mode */
+  --green:  #58A6FF     /* Blue replaces green */
+  --yellow: #F78166     /* Orange replaces yellow */
+}</code></pre>
+
+        <h3>Key Functions</h3>
+        <table>
+            <thead>
+                <tr><th>Function</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>getDailyCountry()</code></td><td>Returns today's target country using date-based hash</td></tr>
+                <tr><td><code>evaluate(guess, target)</code></td><td>Returns letter evaluation array using Wordle algorithm</td></tr>
+                <tr><td><code>hav(lat1, lon1, lat2, lon2)</code></td><td>Haversine great-circle distance calculator</td></tr>
+                <tr><td><code>getDirIdx(lat1, lon1, lat2, lon2)</code></td><td>Returns directional index 0-7 (N, NE, E, SE, S, SW, W, NW)</td></tr>
+                <tr><td><code>submitGuess()</code></td><td>Validates, evaluates, stores guess, triggers animation</td></tr>
+                <tr><td><code>renderGrid()</code></td><td>Redraws all tile rows and current guess row</td></tr>
+                <tr><td><code>applyTileColor(tile, result)</code></td><td>Sets inline backgroundColor/borderColor for a tile</td></tr>
+                <tr><td><code>showEndScreen()</code></td><td>Displays win or loss modal with stats</td></tr>
+                <tr><td><code>buildShare(elId, won)</code></td><td>Builds emoji grid string for clipboard copy</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Development -->
+    <section id="development">
+        <h2>Development</h2>
+
+        <h3>Local Setup</h3>
+<pre><code>cd ~/workspace/wordography
+# No build step required — single HTML file
+npx serve -l 3000 .
+# Open http://localhost:3000</code></pre>
+
+        <h3>Repository</h3>
+        <p>The project is tracked in git alongside other MoBoZed workspace projects:</p>
+<pre><code>~/workspace/wordography/
+├── index.html    # Main game (single file, no dependencies)
+├── .git/         # Git repository
+└── README.md     # (if exists)</code></pre>
+
+        <h3>Testing</h3>
+        <p>Manual testing workflow:</p>
+        <ol style="margin: 10px 20px; color: var(--text-muted);">
+            <li>Make code changes</li>
+            <li>Run <code>npx serve -l 3000 .</code> locally</li>
+            <li>Open <code>http://localhost:3000</code> in browser</li>
+            <li>Test with a known country by temporarily overriding <code>TARGET</code> in browser console</li>
+            <li>Commit and deploy to Horizon when satisfied</li>
+        </ol>
+
+        <h3>Known Issues</h3>
+        <div class="card">
+            <h4>Tile Colour Rendering</h4>
+            <p>On some devices and browsers, tile backgrounds may appear amber/orange instead of the expected green (#6AAA64) or yellow (#FFB300). This is a browser rendering/display calibration issue rather than a code bug — the game's computed colour values are correct as confirmed by Playwright automated tests.</p>
+            <p style="margin-top:10px; color: var(--text-muted); font-size: 0.85rem;">Current mitigation: direct inline <code>backgroundColor</code> style applied via JavaScript, bypassing CSS class cascade entirely.</p>
+        </div>
+
+        <h3>Country Data</h3>
+        <p>Country names, coordinates, and facts are embedded directly in <code>index.html</code>. To add or modify a country, search for the relevant entry in the <code>COUNTRIES</code> array literal. Flags use official country code emoji (e.g. 🇰🇬 for Kyrgyzstan).</p>
+    </section>
+
+    <!-- Deployment -->
+    <section id="deployment">
+        <h2>Deployment</h2>
+
+        <h3>Production (Cloudflare Pages + GitHub)</h3>
+        <p>The game is hosted on Cloudflare Pages and auto-deploys from GitHub on every push.</p>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li><strong>Live URL:</strong> <a href="https://wordography.mobozed.com">https://wordography.mobozed.com</a></li>
+            <li><strong>GitHub Repo:</strong> <a href="https://github.com/darren853/wordography">https://github.com/darren853/wordography</a></li>
+            <li><strong>Cloudflare Pages:</strong> <a href="https://wordography.pages.dev">https://wordography.pages.dev</a></li>
+        </ul>
+        <p>Every push to <code>main</code> on GitHub automatically deploys to Cloudflare Pages. No manual steps needed.</p>
+
+        <h3>Cloudflare Pages Setup (How It Works)</h3>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li>Cloudflare account: <code>b14ff78db90232b77775caa92b14dd20</code></li>
+            <li>Project name: <code>wordography</code></li>
+            <li>Source: GitHub (connected to <code>darren853/wordography</code>)</li>
+            <li>Build command: <em>none</em> (static HTML — no build step)</li>
+            <li>Custom domain: <code>wordography.mobozed.com</code> via CNAME at <code>reg123.co.uk</code></li>
+        </ul>
+        <p>The CNAME at the registrar points <code>wordography.mobozed.com</code> → <code>wordography.pages.dev</code>. Cloudflare Pages provisions SSL automatically.</p>
+
+        <h3>Deploy Process</h3>
+        <pre><code># 1. Make changes to the game files
+cd ~/workspace/wordography
+
+# 2. Commit and push to GitHub (auto-deploys to Cloudflare Pages)
+git add .
+git commit -m "Describe your change"
+git push origin main
+
+# 3. Cloudflare Pages auto-deploys within ~30 seconds
+# Live at: https://wordography.mobozed.com</code></pre>
+
+        <h3>Horizon (Local Dev/Test)</h3>
+<pre><code># From BOB workstation — push to Horizon for local testing
+cd ~/workspace/wordography
+rsync -avz --delete index.html darren@192.168.0.2:/var/www/horizon/wordography/
+# Access at: http://192.168.0.2/wordography/</code></pre>
+
+        <h3>Horizon Home Page</h3>
+        <p>Wordography appears in the <strong>Local Projects</strong> section of the Horizon home page (<code>/</code>). The section order on the home page is managed by the file <code>/var/www/horizon/index.html</code>.</p>
+
+        <h3>Port Access (Local Only)</h3>
+        <p>If running additional instances on specific ports:</p>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li><code>5177</code> — Previous dev server (Japan target)</li>
+            <li><code>5181</code> — Previous test server (Kyrgyzstan target)</li>
+        </ul>
+        <p>These were dev/test servers only. The canonical URL is <code>http://192.168.0.2/wordography/</code>.</p>
+
+        <h3>Git History</h3>
+        <p>Full history on <a href="https://github.com/darren853/wordography/commits/main">GitHub →</a></p>
+        <table>
+            <thead>
+                <tr><th>Commit</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>b732316</code></td><td>Admire view: typewriter letters then row flip reveal animation</td></tr>
+                <tr><td><code>1eaf640</code></td><td>Fix admire view: modern tile rendering, no flip/nested divs</td></tr>
+                <tr><td><code>edc7122</code></td><td>Add developer and user documentation HTML page</td></tr>
+                <tr><td><code>7a7875c</code></td><td>Production release — clean tile rendering, no debug code</td></tr>
+                <tr><td><code>938f586</code></td><td>Simplified rendering: no flip animation, no nested divs</td></tr>
+                <tr><td><code>2ea668a</code></td><td>Direct inline style via JS applyTileColor()</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="github">
+        <h2>GitHub Repository</h2>
+        <p>The canonical repository is: <a href="https://github.com/darren853/wordography">https://github.com/darren853/wordography</a></p>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li><strong>Owner:</strong> darren853</li>
+            <li><strong>Branch:</strong> <code>main</code></li>
+            <li><strong>Auto-deploy:</strong> Every push to <code>main</code> triggers Cloudflare Pages deployment</li>
+            <li><strong>Live URL:</strong> <a href="https://wordography.mobozed.com">https://wordography.mobozed.com</a></li>
+        </ul>
+        <p>The <code>docs/wordography.html</code> in this repo is the developer/user documentation. It is deployed to:</p>
+        <ul style="margin: 10px 20px; color: var(--text-muted);">
+            <li><strong>Horizon (local):</strong> <code>/var/www/horizon/docs/wordography.html</code></li>
+            <li><strong>Production:</strong> Synced separately to Horizon server via SCP</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p><span class="brand"><span class="mo">Mo</span><span class="bo">Bo</span><span class="zed">Zed</span></span> Media Portal</p>
+        <p style="margin-top: 8px;"><a href="https://wordography.mobozed.com">Play Wordography →</a> | <a href="/">Horizon Home →</a></p>
+        <p style="margin-top: 15px; color: var(--text-muted);">Built as a single-file HTML game — no build step, no dependencies, no frameworks.</p>
+    </footer>
+</div>
+</body>
+</html>
