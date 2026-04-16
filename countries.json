@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "AFG",
+    "name": "Afghanistan",
+    "normalizedName": "AFGHANISTAN",
+    "lat": 33.9,
+    "lon": 67.7,
+    "continent": "Asia",
+    "flag": "🇦🇫",
+    "funFact": "Afghanistan has been called the 'Graveyard of Empires'."
+  },
+  {
+    "id": "ALB",
+    "name": "Albania",
+    "normalizedName": "ALBANIA",
+    "lat": 41.1,
+    "lon": 20.2,
+    "continent": "Europe",
+    "flag": "🇦🇱",
+    "funFact": "Albania is one of the few countries where more people live abroad."
+  },
+  {
+    "id": "ALG",
+    "name": "Algeria",
+    "normalizedName": "ALGERIA",
+    "lat": 28.0,
+    "lon": 1.7,
+    "continent": "Africa",
+    "flag": "🇩🇿",
+    "funFact": "Algeria is the largest country in Africa by area."
+  },
+  {
+    "id": "ANG",
+    "name": "Angola",
+    "normalizedName": "ANGOLA",
+    "lat": -11.2,
+    "lon": 17.9,
+    "continent": "Africa",
+    "flag": "🇦🇴",
+    "funFact": "Angola has vast oil reserves."
+  },
+  {
+    "id": "ARG",
+    "name": "Argentina",
+    "normalizedName": "ARGENTINA",
+    "lat": -38.4,
+    "lon": -63.6,
+    "continent": "South America",
+    "flag": "🇦🇷",
+    "funFact": "Argentina is home to the southernmost city in the world."
+  },
+  {
+    "id": "ARM",
+    "name": "Armenia",
+    "normalizedName": "ARMENIA",
+    "lat": 40.1,
+    "lon": 45.0,
+    "continent": "Asia",
+    "flag": "🇦🇲",
+    "funFact": "Armenia was the first nation to adopt Christianity."
+  },
+  {
+    "id": "AUS",
+    "name": "Australia",
+    "normalizedName": "AUSTRALIA",
+    "lat": -25.3,
+    "lon": 133.8,
+    "continent": "Oceania",
+    "flag": "🇦🇺",
+    "funFact": "Australia is both a country and a continent."
+  },
+  {
+    "id": "AUT",
+    "name": "Austria",
+    "normalizedName": "AUSTRIA",
+    "lat": 47.5,
+    "lon": 14.6,
+    "continent": "Europe",
+    "flag": "🇦🇹",
+    "funFact": "Austria has produced more Nobel Prize winners per capita."
+  },
+  {
+    "id": "AZE",
+    "name": "Azerbaijan",
+    "normalizedName": "AZERBAIJAN",
+    "lat": 40.1,
+    "lon": 47.6,
+    "continent": "Asia",
+    "flag": "🇦🇿",
+    "funFact": "Azerbaijan is called the 'Land of Fire'."
+  },
+  {
+    "id": "BAH",
+    "name": "Bahamas",
+    "normalizedName": "BAHAMAS",
+    "lat": 25.0,
+    "lon": -77.4,
+    "continent": "North America",
+    "flag": "🇧🇸",
+    "funFact": "The Bahamas has one of the highest densities of centenarians."
+  },
+  {
+    "id": "BHR",
+    "name": "Bahrain",
+    "normalizedName": "BAHRAIN",
+    "lat": 26.0,
+    "lon": 50.6,
+    "continent": "Asia",
+    "flag": "🇧🇭",
+    "funFact": "Bahrain was the first Arab country to discover oil."
+  },
+  {
+    "id": "BAN",
+    "name": "Bangladesh",
+    "normalizedName": "BANGLADESH",
+    "lat": 23.7,
+    "lon": 90.4,
+    "continent": "Asia",
+    "flag": "🇧🇩",
+    "funFact": "Bangladesh has the longest sea beach in the world."
+  },
+  {
+    "id": "BAR",
+    "name": "Barbados",
+    "normalizedName": "BARBADOS",
+    "lat": 13.2,
+    "lon": -59.5,
+    "continent": "North America",
+    "flag": "🇧🇧",
+    "funFact": "Barbados was a British colony for over 300 years."
+  },
+  {
+    "id": "BLR",
+    "name": "Belarus",
+    "normalizedName": "BELARUS",
+    "lat": 53.7,
+    "lon": 28.0,
+    "continent": "Europe",
+    "flag": "🇧🇾",
+    "funFact": "Belarus is one of the most forested countries in Europe."
+  },
+  {
+    "id": "BEL",
+    "name": "Belgium",
+    "normalizedName": "BELGIUM",
+    "lat": 50.5,
+    "lon": 4.5,
+    "continent": "Europe",
+    "flag": "🇧🇪",
+    "funFact": "Belgium produces over 220,000 tonnes of chocolate per year."
+  },
+  {
+    "id": "BLZ",
+    "name": "Belize",
+    "normalizedName": "BELIZE",
+    "lat": 17.2,
+    "lon": -88.8,
+    "continent": "North America",
+    "flag": "🇧🇿",
+    "funFact": "Belize is home to the second longest barrier reef."
+  },
+  {
+    "id": "BEN",
+    "name": "Benin",
+    "normalizedName": "BENIN",
+    "lat": 9.3,
+    "lon": 2.3,
+    "continent": "Africa",
+    "flag": "🇧🇯",
+    "funFact": "Benin was the first African country to adopt a new name."
+  },
+  {
+    "id": "BHU",
+    "name": "Bhutan",
+    "normalizedName": "BHUTAN",
+    "lat": 27.5,
+    "lon": 90.5,
+    "continent": "Asia",
+    "flag": "🇧🇹",
+    "funFact": "Bhutan is the only country that measures Gross National Happiness."
+  },
+  {
+    "id": "BOL",
+    "name": "Bolivia",
+    "normalizedName": "BOLIVIA",
+    "lat": -16.3,
+    "lon": -63.6,
+    "continent": "South America",
+    "flag": "🇧🇴",
+    "funFact": "Bolivia has the largest salt flat in the world."
+  },
+  {
+    "id": "BIH",
+    "name": "Bosnia",
+    "normalizedName": "BOSNIA",
+    "lat": 43.9,
+    "lon": 17.7,
+    "continent": "Europe",
+    "flag": "🇧🇦",
+    "funFact": "Bosnia has a unique flag with a geometric triangle."
+  },
+  {
+    "id": "BOT",
+    "name": "Botswana",
+    "normalizedName": "BOTSWANA",
+    "lat": -22.3,
+    "lon": 24.7,
+    "continent": "Africa",
+    "flag": "🇧🇼",
+    "funFact": "Botswana is one of Africa's most stable democracies."
+  },
+  {
+    "id": "BRA",
+    "name": "Brazil",
+    "normalizedName": "BRAZIL",
+    "lat": -14.2,
+    "lon": -51.9,
+    "continent": "South America",
+    "flag": "🇧🇷",
+    "funFact": "Brazil contains about 60% of the Amazon rainforest."
+  },
+  {
+    "id": "BRU",
+    "name": "Brunei",
+    "normalizedName": "BRUNEI",
+    "lat": 4.5,
+    "lon": 114.7,
+    "continent": "Asia",
+    "flag": "🇧🇳",
+    "funFact": "Brunei is one of the few countries with no national debt."
+  },
+  {
+    "id": "BUL",
+    "name": "Bulgaria",
+    "normalizedName": "BULGARIA",
+    "lat": 42.7,
+    "lon": 25.5,
+    "continent": "Europe",
+    "flag": "🇧🇬",
+    "funFact": "Bulgaria has never changed the name of its capital."
+  },
+  {
+    "id": "BFA",
+    "name": "Burkina Faso",
+    "normalizedName": "BURKINAFASO",
+    "lat": 12.2,
+    "lon": -1.6,
+    "continent": "Africa",
+    "flag": "🇧🇫",
+    "funFact": "Burkina Faso has the famous FESPACO film festival."
+  },
+  {
+    "id": "BDI",
+    "name": "Burundi",
+    "normalizedName": "BURUNDI",
+    "lat": -3.4,
+    "lon": 30.0,
+    "continent": "Africa",
+    "flag": "🇧🇮",
+    "funFact": "Burundi has a unique tradition of royal drum festivals."
+  },
+  {
+    "id": "CPV",
+    "name": "Cabo Verde",
+    "normalizedName": "CABOVERDE",
+    "lat": 16.5,
+    "lon": -24.0,
+    "continent": "Africa",
+    "flag": "🇨🇻",
+    "funFact": "Cabo Verde is an archipelago of 10 volcanic islands."
+  },
+  {
+    "id": "CAM",
+    "name": "Cambodia",
+    "normalizedName": "CAMBODIA",
+    "lat": 12.6,
+    "lon": 105.0,
+    "continent": "Asia",
+    "flag": "🇰🇭",
+    "funFact": "Angkor Wat is the largest religious monument in the world."
+  },
+  {
+    "id": "CMR",
+    "name": "Cameroon",
+    "normalizedName": "CAMEROON",
+    "lat": 3.9,
+    "lon": 11.5,
+    "continent": "Africa",
+    "flag": "🇨🇲",
+    "funFact": "Cameroon is called 'Africa in miniature'."
+  },
+  {
+    "id": "CAN",
+    "name": "Canada",
+    "normalizedName": "CANADA",
+    "lat": 56.1,
+    "lon": -106.3,
+    "continent": "North America",
+    "flag": "🇨🇦",
+    "funFact": "Canada has the longest coastline of any country."
+  },
+  {
+    "id": "CAF",
+    "name": "CAR",
+    "normalizedName": "CENTRALAFRICANREPUBLIC",
+    "lat": 6.6,
+    "lon": 20.9,
+    "continent": "Africa",
+    "flag": "🇨🇫",
+    "funFact": "CAR has the lowest population density in Africa."
+  },
+  {
+    "id": "CHA",
+    "name": "Chad",
+    "normalizedName": "CHAD",
+    "lat": 15.5,
+    "lon": 19.0,
+    "continent": "Africa",
+    "flag": "🇹🇩",
+    "funFact": "Chad is named after Lake Chad."
+  },
+  {
+    "id": "CHI",
+    "name": "Chile",
+    "normalizedName": "CHILE",
+    "lat": -35.7,
+    "lon": -71.5,
+    "continent": "South America",
+    "flag": "🇨🇱",
+    "funFact": "Chile is the longest country in the world."
+  },
+  {
+    "id": "CHN",
+    "name": "China",
+    "normalizedName": "CHINA",
+    "lat": 35.9,
+    "lon": 104.2,
+    "continent": "Asia",
+    "flag": "🇨🇳",
+    "funFact": "China has the world's largest population."
+  },
+  {
+    "id": "COL",
+    "name": "Colombia",
+    "normalizedName": "COLOMBIA",
+    "lat": 4.6,
+    "lon": -74.1,
+    "continent": "South America",
+    "flag": "🇨🇴",
+    "funFact": "Colombia is the only South American country with coastlines on both oceans."
+  },
+  {
+    "id": "COM",
+    "name": "Comoros",
+    "normalizedName": "COMOROS",
+    "lat": -11.6,
+    "lon": 43.3,
+    "continent": "Africa",
+    "flag": "🇰🇲",
+    "funFact": "Comoros is one of the few countries where the Coelacanth can be found."
+  },
+  {
+    "id": "COD",
+    "name": "DR Congo",
+    "normalizedName": "DRCONGO",
+    "lat": -4.0,
+    "lon": 21.8,
+    "continent": "Africa",
+    "flag": "🇨🇩",
+    "funFact": "DR Congo contains about 80% of the world's coltan."
+  },
+  {
+    "id": "CRI",
+    "name": "Costa Rica",
+    "normalizedName": "COSTARICA",
+    "lat": 9.7,
+    "lon": -83.8,
+    "continent": "North America",
+    "flag": "🇨🇷",
+    "funFact": "Costa Rica has no army."
+  },
+  {
+    "id": "CRO",
+    "name": "Croatia",
+    "normalizedName": "CROATIA",
+    "lat": 45.1,
+    "lon": 15.2,
+    "continent": "Europe",
+    "flag": "🇭🇷",
+    "funFact": "Croatia has over 1,200 islands."
+  },
+  {
+    "id": "CUB",
+    "name": "Cuba",
+    "normalizedName": "CUBA",
+    "lat": 21.5,
+    "lon": -77.8,
+    "continent": "North America",
+    "flag": "🇨🇺",
+    "funFact": "Cuba has one of the highest literacy rates in the world."
+  },
+  {
+    "id": "CYP",
+    "name": "Cyprus",
+    "normalizedName": "CYPRUS",
+    "lat": 35.1,
+    "lon": 33.4,
+    "continent": "Europe",
+    "flag": "🇨🇾",
+    "funFact": "Cyprus is the legendary birthplace of Aphrodite."
+  },
+  {
+    "id": "CZE",
+    "name": "Czechia",
+    "normalizedName": "CZECHIA",
+    "lat": 49.8,
+    "lon": 15.5,
+    "continent": "Europe",
+    "flag": "🇨🇿",
+    "funFact": "Czechia has the highest beer consumption per capita."
+  },
+  {
+    "id": "DNK",
+    "name": "Denmark",
+    "normalizedName": "DENMARK",
+    "lat": 56.3,
+    "lon": 9.5,
+    "continent": "Europe",
+    "flag": "🇩🇰",
+    "funFact": "Denmark is the oldest kingdom in the world."
+  },
+  {
+    "id": "DJI",
+    "name": "Djibouti",
+    "normalizedName": "DJIBOUTI",
+    "lat": 11.8,
+    "lon": 42.6,
+    "continent": "Africa",
+    "flag": "🇩🇯",
+    "funFact": "Djibouti sits at the junction of the Red Sea and Gulf of Aden."
+  },
+  {
+    "id": "DOM",
+    "name": "Dominican Republic",
+    "normalizedName": "DOMINICANREPUBLIC",
+    "lat": 18.7,
+    "lon": -70.2,
+    "continent": "North America",
+    "flag": "🇩🇴",
+    "funFact": "The Dominican Republic shares Hispaniola with Haiti."
+  },
+  {
+    "id": "ECU",
+    "name": "Ecuador",
+    "normalizedName": "ECUADOR",
+    "lat": -1.8,
+    "lon": -78.2,
+    "continent": "South America",
+    "flag": "🇪🇨",
+    "funFact": "Ecuador is named after the Equator."
+  },
+  {
+    "id": "EGY",
+    "name": "Egypt",
+    "normalizedName": "EGYPT",
+    "lat": 26.8,
+    "lon": 30.8,
+    "continent": "Africa",
+    "flag": "🇪🇬",
+    "funFact": "Egypt has the longest river in the world."
+  },
+  {
+    "id": "ESA",
+    "name": "El Salvador",
+    "normalizedName": "ELSALVADOR",
+    "lat": 13.8,
+    "lon": -88.9,
+    "continent": "North America",
+    "flag": "🇸🇻",
+    "funFact": "El Salvador is the smallest country in Central America."
+  },
+  {
+    "id": "EQG",
+    "name": "Equatorial Guinea",
+    "normalizedName": "EQUATORIALGUINEA",
+    "lat": 1.5,
+    "lon": 10.3,
+    "continent": "Africa",
+    "flag": "🇬🇶",
+    "funFact": "Spanish is official in Equatorial Guinea."
+  },
+  {
+    "id": "ERI",
+    "name": "Eritrea",
+    "normalizedName": "ERITREA",
+    "lat": 15.2,
+    "lon": 39.8,
+    "continent": "Africa",
+    "flag": "🇪🇷",
+    "funFact": "Eritrea gained independence only in 1993."
+  },
+  {
+    "id": "EST",
+    "name": "Estonia",
+    "normalizedName": "ESTONIA",
+    "lat": 58.6,
+    "lon": 25.0,
+    "continent": "Europe",
+    "flag": "🇪🇪",
+    "funFact": "Estonia is the most digitally advanced society in the world."
+  },
+  {
+    "id": "SWZ",
+    "name": "Eswatini",
+    "normalizedName": "ESWATINI",
+    "lat": -26.5,
+    "lon": 31.5,
+    "continent": "Africa",
+    "flag": "🇸🇿",
+    "funFact": "Eswatini is one of the last absolute monarchies in Africa."
+  },
+  {
+    "id": "ETH",
+    "name": "Ethiopia",
+    "normalizedName": "ETHIOPIA",
+    "lat": 9.1,
+    "lon": 40.5,
+    "continent": "Africa",
+    "flag": "🇪🇹",
+    "funFact": "Ethiopia has its own calendar."
+  },
+  {
+    "id": "FIJ",
+    "name": "Fiji",
+    "normalizedName": "FIJI",
+    "lat": -17.7,
+    "lon": 178.1,
+    "continent": "Oceania",
+    "flag": "🇫🇯",
+    "funFact": "Fiji consists of over 300 islands."
+  },
+  {
+    "id": "FIN",
+    "name": "Finland",
+    "normalizedName": "FINLAND",
+    "lat": 61.9,
+    "lon": 25.7,
+    "continent": "Europe",
+    "flag": "🇫🇮",
+    "funFact": "Finland has more saunas than cars."
+  },
+  {
+    "id": "FRA",
+    "name": "France",
+    "normalizedName": "FRANCE",
+    "lat": 46.2,
+    "lon": 2.2,
+    "continent": "Europe",
+    "flag": "🇫🇷",
+    "funFact": "France is the most visited country in the world."
+  },
+  {
+    "id": "GAB",
+    "name": "Gabon",
+    "normalizedName": "GABON",
+    "lat": -0.8,
+    "lon": 11.6,
+    "continent": "Africa",
+    "flag": "🇬🇦",
+    "funFact": "Gabon has been called 'the last Eden'."
+  },
+  {
+    "id": "GAM",
+    "name": "Gambia",
+    "normalizedName": "GAMBIA",
+    "lat": 13.4,
+    "lon": -15.3,
+    "continent": "Africa",
+    "flag": "🇬🇲",
+    "funFact": "The Gambia is the smallest country on mainland Africa."
+  },
+  {
+    "id": "GEO",
+    "name": "Georgia",
+    "normalizedName": "GEORGIA",
+    "lat": 42.3,
+    "lon": 43.4,
+    "continent": "Asia",
+    "flag": "🇬🇪",
+    "funFact": "Georgia is one of the oldest wine-producing countries."
+  },
+  {
+    "id": "GER",
+    "name": "Germany",
+    "normalizedName": "GERMANY",
+    "lat": 51.2,
+    "lon": 10.5,
+    "continent": "Europe",
+    "flag": "🇩🇪",
+    "funFact": "Germany has 16 states and over 1,500 different beers."
+  },
+  {
+    "id": "GHA",
+    "name": "Ghana",
+    "normalizedName": "GHANA",
+    "lat": 7.9,
+    "lon": -1.0,
+    "continent": "Africa",
+    "flag": "🇬🇭",
+    "funFact": "Ghana was the first African country to gain independence."
+  },
+  {
+    "id": "GRE",
+    "name": "Greece",
+    "normalizedName": "GREECE",
+    "lat": 39.1,
+    "lon": 21.8,
+    "continent": "Europe",
+    "flag": "🇬🇷",
+    "funFact": "Greece has more archaeological museums than any other country."
+  },
+  {
+    "id": "GUA",
+    "name": "Guatemala",
+    "normalizedName": "GUATEMALA",
+    "lat": 15.8,
+    "lon": -90.2,
+    "continent": "North America",
+    "flag": "🇬🇹",
+    "funFact": "Guatemala is the birthplace of chocolate."
+  },
+  {
+    "id": "GBS",
+    "name": "Guinea-Bissau",
+    "normalizedName": "GUINEABISSAU",
+    "lat": 11.8,
+    "lon": -15.2,
+    "continent": "Africa",
+    "flag": "🇬🇼",
+    "funFact": "Guinea-Bissau has over 90 uninhabited islands."
+  },
+  {
+    "id": "GNA",
+    "name": "Guinea",
+    "normalizedName": "GUINEA",
+    "lat": 9.9,
+    "lon": -9.7,
+    "continent": "Africa",
+    "flag": "🇬🇳",
+    "funFact": "Guinea contains the source of the Niger River."
+  },
+  {
+    "id": "GUY",
+    "name": "Guyana",
+    "normalizedName": "GUYANA",
+    "lat": 4.8,
+    "lon": -58.9,
+    "continent": "South America",
+    "flag": "🇬🇾",
+    "funFact": "Guyana is the only English-speaking country in South America."
+  },
+  {
+    "id": "HAI",
+    "name": "Haiti",
+    "normalizedName": "HAITI",
+    "lat": 19.0,
+    "lon": -72.4,
+    "continent": "North America",
+    "flag": "🇭🇹",
+    "funFact": "Haiti was the first free Black republic in the world."
+  },
+  {
+    "id": "HON",
+    "name": "Honduras",
+    "normalizedName": "HONDURAS",
+    "lat": 15.2,
+    "lon": -86.2,
+    "continent": "North America",
+    "flag": "🇭🇳",
+    "funFact": "Honduras has the second-largest barrier reef."
+  },
+  {
+    "id": "HUN",
+    "name": "Hungary",
+    "normalizedName": "HUNGARY",
+    "lat": 47.2,
+    "lon": 19.5,
+    "continent": "Europe",
+    "flag": "🇭🇺",
+    "funFact": "Hungary invented the Rubik's Cube."
+  },
+  {
+    "id": "ISL",
+    "name": "Iceland",
+    "normalizedName": "ICELAND",
+    "lat": 64.9,
+    "lon": -19.0,
+    "continent": "Europe",
+    "flag": "🇮🇸",
+    "funFact": "Iceland has no army."
+  },
+  {
+    "id": "IND",
+    "name": "India",
+    "normalizedName": "INDIA",
+    "lat": 20.6,
+    "lon": 78.9,
+    "continent": "Asia",
+    "flag": "🇮🇳",
+    "funFact": "India has the world's largest postal network."
+  },
+  {
+    "id": "IDN",
+    "name": "Indonesia",
+    "normalizedName": "INDONESIA",
+    "lat": -0.8,
+    "lon": 113.9,
+    "continent": "Asia",
+    "flag": "🇮🇩",
+    "funFact": "Indonesia is the world's largest archipelago."
+  },
+  {
+    "id": "IRN",
+    "name": "Iran",
+    "normalizedName": "IRAN",
+    "lat": 32.4,
+    "lon": 53.7,
+    "continent": "Asia",
+    "flag": "🇮🇷",
+    "funFact": "Iran is one of the world's oldest civilizations."
+  },
+  {
+    "id": "IRQ",
+    "name": "Iraq",
+    "normalizedName": "IRAQ",
+    "lat": 33.2,
+    "lon": 43.7,
+    "continent": "Asia",
+    "flag": "🇮🇶",
+    "funFact": "Iraq is home to ancient Mesopotamia."
+  },
+  {
+    "id": "IRL",
+    "name": "Ireland",
+    "normalizedName": "IRELAND",
+    "lat": 53.1,
+    "lon": -7.7,
+    "continent": "Europe",
+    "flag": "🇮🇪",
+    "funFact": "Ireland has no snakes."
+  },
+  {
+    "id": "ISR",
+    "name": "Israel",
+    "normalizedName": "ISRAEL",
+    "lat": 31.0,
+    "lon": 34.9,
+    "continent": "Asia",
+    "flag": "🇮🇱",
+    "funFact": "Israel has more museums per capita than any other country."
+  },
+  {
+    "id": "ITA",
+    "name": "Italy",
+    "normalizedName": "ITALY",
+    "lat": 41.9,
+    "lon": 12.6,
+    "continent": "Europe",
+    "flag": "🇮🇹",
+    "funFact": "Italy has the most UNESCO World Heritage Sites."
+  },
+  {
+    "id": "JAM",
+    "name": "Jamaica",
+    "normalizedName": "JAMAICA",
+    "lat": 18.1,
+    "lon": -77.3,
+    "continent": "North America",
+    "flag": "🇯🇲",
+    "funFact": "Jamaica's Usain Bolt is the fastest man in history."
+  },
+  {
+    "id": "JPN",
+    "name": "Japan",
+    "normalizedName": "JAPAN",
+    "lat": 36.2,
+    "lon": 138.3,
+    "continent": "Asia",
+    "flag": "🇯🇵",
+    "funFact": "Japan has over 5.5 million vending machines."
+  },
+  {
+    "id": "JOR",
+    "name": "Jordan",
+    "normalizedName": "JORDAN",
+    "lat": 30.6,
+    "lon": 36.2,
+    "continent": "Asia",
+    "flag": "🇯🇴",
+    "funFact": "Jordan is home to Petra."
+  },
+  {
+    "id": "KAZ",
+    "name": "Kazakhstan",
+    "normalizedName": "KAZAKHSTAN",
+    "lat": 48.0,
+    "lon": 66.9,
+    "continent": "Asia",
+    "flag": "🇰🇿",
+    "funFact": "Kazakhstan is the largest landlocked country in the world."
+  },
+  {
+    "id": "KEN",
+    "name": "Kenya",
+    "normalizedName": "KENYA",
+    "lat": -0.0,
+    "lon": 37.9,
+    "continent": "Africa",
+    "flag": "🇰🇪",
+    "funFact": "Kenya is named after a Kikuyu word."
+  },
+  {
+    "id": "PRK",
+    "name": "North Korea",
+    "normalizedName": "NORTHKOREA",
+    "lat": 40.3,
+    "lon": 127.5,
+    "continent": "Asia",
+    "flag": "🇰🇵",
+    "funFact": "North Korea is one of the most isolated countries."
+  },
+  {
+    "id": "KOR",
+    "name": "South Korea",
+    "normalizedName": "SOUTHKOREA",
+    "lat": 35.9,
+    "lon": 127.8,
+    "continent": "Asia",
+    "flag": "🇰🇷",
+    "funFact": "South Korea has the fastest internet speeds."
+  },
+  {
+    "id": "KWT",
+    "name": "Kuwait",
+    "normalizedName": "KUWAIT",
+    "lat": 29.3,
+    "lon": 47.5,
+    "continent": "Asia",
+    "flag": "🇰🇼",
+    "funFact": "Kuwait was one of the first Gulf states to discover oil."
+  },
+  {
+    "id": "KGZ",
+    "name": "Kyrgyzstan",
+    "normalizedName": "KYRGYZSTAN",
+    "lat": 41.2,
+    "lon": 74.8,
+    "continent": "Asia",
+    "flag": "🇰🇬",
+    "funFact": "Kyrgyzstan has over 90 different ethnic groups."
+  },
+  {
+    "id": "LAO",
+    "name": "Laos",
+    "normalizedName": "LAOS",
+    "lat": 19.9,
+    "lon": 102.5,
+    "continent": "Asia",
+    "flag": "🇱🇦",
+    "funFact": "Laos is the only landlocked country in Southeast Asia."
+  },
+  {
+    "id": "LAT",
+    "name": "Latvia",
+    "normalizedName": "LATVIA",
+    "lat": 56.9,
+    "lon": 24.6,
+    "continent": "Europe",
+    "flag": "🇱🇻",
+    "funFact": "Latvia's capital Riga has one of the world's largest Art Nouveau collections."
+  },
+  {
+    "id": "LIB",
+    "name": "Lebanon",
+    "normalizedName": "LEBANON",
+    "lat": 33.9,
+    "lon": 35.9,
+    "continent": "Asia",
+    "flag": "🇱🇧",
+    "funFact": "Lebanon is home to one of the oldest cities."
+  },
+  {
+    "id": "LES",
+    "name": "Lesotho",
+    "normalizedName": "LESOTHO",
+    "lat": -29.6,
+    "lon": 28.2,
+    "continent": "Africa",
+    "flag": "🇱🇸",
+    "funFact": "Lesotho is entirely surrounded by South Africa."
+  },
+  {
+    "id": "LBR",
+    "name": "Liberia",
+    "normalizedName": "LIBERIA",
+    "lat": 6.4,
+    "lon": -9.4,
+    "continent": "Africa",
+    "flag": "🇱🇷",
+    "funFact": "Liberia was the first African republic to declare independence."
+  },
+  {
+    "id": "LBY",
+    "name": "Libya",
+    "normalizedName": "LIBYA",
+    "lat": 26.3,
+    "lon": 17.2,
+    "continent": "Africa",
+    "flag": "🇱🇾",
+    "funFact": "Libya has the largest proven oil reserves in Africa."
+  },
+  {
+    "id": "LTU",
+    "name": "Lithuania",
+    "normalizedName": "LITHUANIA",
+    "lat": 55.2,
+    "lon": 23.9,
+    "continent": "Europe",
+    "flag": "🇱🇹",
+    "funFact": "Lithuania was the first Soviet republic to declare independence."
+  },
+  {
+    "id": "LUX",
+    "name": "Luxembourg",
+    "normalizedName": "LUXEMBOURG",
+    "lat": 49.8,
+    "lon": 6.1,
+    "continent": "Europe",
+    "flag": "🇱🇺",
+    "funFact": "Luxembourg is the only Grand Duchy in the world."
+  },
+  {
+    "id": "MDG",
+    "name": "Madagascar",
+    "normalizedName": "MADAGASCAR",
+    "lat": -18.8,
+    "lon": 46.9,
+    "continent": "Africa",
+    "flag": "🇲🇬",
+    "funFact": "Madagascar is home to over 100,000 endemic species."
+  },
+  {
+    "id": "MWI",
+    "name": "Malawi",
+    "normalizedName": "MALAWI",
+    "lat": -13.3,
+    "lon": 34.3,
+    "continent": "Africa",
+    "flag": "🇲🇼",
+    "funFact": "Malawi has more fish species in Lake Malawi than any other lake."
+  },
+  {
+    "id": "MAS",
+    "name": "Malaysia",
+    "normalizedName": "MALAYSIA",
+    "lat": 4.2,
+    "lon": 108.0,
+    "continent": "Asia",
+    "flag": "🇲🇾",
+    "funFact": "Malaysia is one of the world's most megadiverse countries."
+  },
+  {
+    "id": "MLI",
+    "name": "Mali",
+    "normalizedName": "MALI",
+    "lat": 17.6,
+    "lon": -3.9,
+    "continent": "Africa",
+    "flag": "🇲🇱",
+    "funFact": "Mali was once part of the greatest empire in West Africa."
+  },
+  {
+    "id": "MLT",
+    "name": "Malta",
+    "normalizedName": "MALTA",
+    "lat": 35.9,
+    "lon": 14.4,
+    "continent": "Europe",
+    "flag": "🇲🇹",
+    "funFact": "Malta is one of the most densely populated countries."
+  },
+  {
+    "id": "MTN",
+    "name": "Mauritania",
+    "normalizedName": "MAURITANIA",
+    "lat": 21.0,
+    "lon": 10.9,
+    "continent": "Africa",
+    "flag": "🇲🇷",
+    "funFact": "Mauritania is the world's largest Arabic-speaking country."
+  },
+  {
+    "id": "MRI",
+    "name": "Mauritius",
+    "normalizedName": "MAURITIUS",
+    "lat": -20.2,
+    "lon": 57.5,
+    "continent": "Africa",
+    "flag": "🇲🇺",
+    "funFact": "Mauritius is the only known source of the extinct Dodo bird."
+  },
+  {
+    "id": "MEX",
+    "name": "Mexico",
+    "normalizedName": "MEXICO",
+    "lat": 23.6,
+    "lon": -102.6,
+    "continent": "North America",
+    "flag": "🇲🇽",
+    "funFact": "Mexico has 35 UNESCO World Heritage Sites."
+  },
+  {
+    "id": "MDA",
+    "name": "Moldova",
+    "normalizedName": "MOLDOVA",
+    "lat": 47.4,
+    "lon": 28.4,
+    "continent": "Europe",
+    "flag": "🇲🇩",
+    "funFact": "Moldova has the largest wine cellar in the world."
+  },
+  {
+    "id": "MNG",
+    "name": "Mongolia",
+    "normalizedName": "MONGOLIA",
+    "lat": 46.8,
+    "lon": 103.0,
+    "continent": "Asia",
+    "flag": "🇲🇳",
+    "funFact": "Mongolia is the least densely populated country."
+  },
+  {
+    "id": "MNE",
+    "name": "Montenegro",
+    "normalizedName": "MONTENEGRO",
+    "lat": 42.7,
+    "lon": 19.4,
+    "continent": "Europe",
+    "flag": "🇲🇪",
+    "funFact": "Montenegro means 'Black Mountain'."
+  },
+  {
+    "id": "MAR",
+    "name": "Morocco",
+    "normalizedName": "MOROCCO",
+    "lat": 31.8,
+    "lon": -7.1,
+    "continent": "Africa",
+    "flag": "🇲🇦",
+    "funFact": "Morocco has the world's oldest university."
+  },
+  {
+    "id": "MOZ",
+    "name": "Mozambique",
+    "normalizedName": "MOZAMBIQUE",
+    "lat": -18.7,
+    "lon": 35.5,
+    "continent": "Africa",
+    "flag": "🇲🇿",
+    "funFact": "Mozambique was a Portuguese colony for 500 years."
+  },
+  {
+    "id": "MMR",
+    "name": "Myanmar",
+    "normalizedName": "MYANMAR",
+    "lat": 21.9,
+    "lon": 96.0,
+    "continent": "Asia",
+    "flag": "🇲🇲",
+    "funFact": "Myanmar has over 100 different ethnic groups."
+  },
+  {
+    "id": "NAM",
+    "name": "Namibia",
+    "normalizedName": "NAMIBIA",
+    "lat": -22.0,
+    "lon": 17.1,
+    "continent": "Africa",
+    "flag": "🇳🇦",
+    "funFact": "Namibia was the first African country with environmental protection in its constitution."
+  },
+  {
+    "id": "NRU",
+    "name": "Nauru",
+    "normalizedName": "NAURU",
+    "lat": -0.5,
+    "lon": 166.9,
+    "continent": "Oceania",
+    "flag": "🇳🇷",
+    "funFact": "Nauru is the smallest island nation."
+  },
+  {
+    "id": "NEP",
+    "name": "Nepal",
+    "normalizedName": "NEPAL",
+    "lat": 28.4,
+    "lon": 84.1,
+    "continent": "Asia",
+    "flag": "🇳🇵",
+    "funFact": "Nepal has 8 of the world's 10 highest mountains."
+  },
+  {
+    "id": "NED",
+    "name": "Netherlands",
+    "normalizedName": "NETHERLANDS",
+    "lat": 52.1,
+    "lon": 5.3,
+    "continent": "Europe",
+    "flag": "🇳🇱",
+    "funFact": "The Netherlands is the most densely populated in the EU."
+  },
+  {
+    "id": "NZL",
+    "name": "New Zealand",
+    "normalizedName": "NEWZEALAND",
+    "lat": -40.9,
+    "lon": 174.9,
+    "continent": "Oceania",
+    "flag": "🇳🇿",
+    "funFact": "New Zealand was the first major landmass to be populated by humans."
+  },
+  {
+    "id": "NIC",
+    "name": "Nicaragua",
+    "normalizedName": "NICARAGUA",
+    "lat": 12.9,
+    "lon": -85.3,
+    "continent": "North America",
+    "flag": "🇳🇮",
+    "funFact": "Nicaragua has the largest lake in Central America."
+  },
+  {
+    "id": "NER",
+    "name": "Niger",
+    "normalizedName": "NIGER",
+    "lat": 17.6,
+    "lon": 8.1,
+    "continent": "Africa",
+    "flag": "🇳🇪",
+    "funFact": "Niger is named after the Niger River."
+  },
+  {
+    "id": "NGA",
+    "name": "Nigeria",
+    "normalizedName": "NIGERIA",
+    "lat": 9.1,
+    "lon": 8.7,
+    "continent": "Africa",
+    "flag": "🇳🇬",
+    "funFact": "Nigeria is Africa's most populous country."
+  },
+  {
+    "id": "NOR",
+    "name": "Norway",
+    "normalizedName": "NORWAY",
+    "lat": 60.5,
+    "lon": 8.5,
+    "continent": "Europe",
+    "flag": "🇳🇴",
+    "funFact": "Norway has the longest coastline in Europe."
+  },
+  {
+    "id": "OMN",
+    "name": "Oman",
+    "normalizedName": "OMAN",
+    "lat": 21.5,
+    "lon": 55.9,
+    "continent": "Asia",
+    "flag": "🇴🇲",
+    "funFact": "Oman has no income tax."
+  },
+  {
+    "id": "PAK",
+    "name": "Pakistan",
+    "normalizedName": "PAKISTAN",
+    "lat": 30.4,
+    "lon": 69.3,
+    "continent": "Asia",
+    "flag": "🇵🇰",
+    "funFact": "Pakistan contains K2, the second-highest mountain."
+  },
+  {
+    "id": "PAN",
+    "name": "Panama",
+    "normalizedName": "PANAMA",
+    "lat": 8.5,
+    "lon": -80.8,
+    "continent": "North America",
+    "flag": "🇵🇦",
+    "funFact": "Panama's Canal connects the Atlantic and Pacific Oceans."
+  },
+  {
+    "id": "PNG",
+    "name": "Papua New Guinea",
+    "normalizedName": "PAPUANEWGUINEA",
+    "lat": -6.3,
+    "lon": 143.9,
+    "continent": "Oceania",
+    "flag": "🇵🇬",
+    "funFact": "Papua New Guinea has over 800 languages."
+  },
+  {
+    "id": "PAR",
+    "name": "Paraguay",
+    "normalizedName": "PARAGUAY",
+    "lat": -23.4,
+    "lon": -58.4,
+    "continent": "South America",
+    "flag": "🇵🇾",
+    "funFact": "Paraguay is one of only two landlocked countries in South America."
+  },
+  {
+    "id": "PER",
+    "name": "Peru",
+    "normalizedName": "PERU",
+    "lat": -9.2,
+    "lon": -75.0,
+    "continent": "South America",
+    "flag": "🇵🇪",
+    "funFact": "Peru is home to Machu Picchu."
+  },
+  {
+    "id": "PHI",
+    "name": "Philippines",
+    "normalizedName": "PHILIPPINES",
+    "lat": 12.9,
+    "lon": 121.8,
+    "continent": "Asia",
+    "flag": "🇵🇭",
+    "funFact": "The Philippines is made up of 7,641 islands."
+  },
+  {
+    "id": "POL",
+    "name": "Poland",
+    "normalizedName": "POLAND",
+    "lat": 51.9,
+    "lon": 19.1,
+    "continent": "Europe",
+    "flag": "🇵🇱",
+    "funFact": "Poland has 17 UNESCO World Heritage Sites."
+  },
+  {
+    "id": "POR",
+    "name": "Portugal",
+    "normalizedName": "PORTUGAL",
+    "lat": 39.4,
+    "lon": -8.2,
+    "continent": "Europe",
+    "flag": "🇵🇹",
+    "funFact": "Portugal is the oldest nation-state in Europe."
+  },
+  {
+    "id": "QAT",
+    "name": "Qatar",
+    "normalizedName": "QATAR",
+    "lat": 25.4,
+    "lon": 51.2,
+    "continent": "Asia",
+    "flag": "🇶🇦",
+    "funFact": "Qatar has the highest GDP per capita in the world."
+  },
+  {
+    "id": "ROU",
+    "name": "Romania",
+    "normalizedName": "ROMANIA",
+    "lat": 45.9,
+    "lon": 24.9,
+    "continent": "Europe",
+    "flag": "🇷🇴",
+    "funFact": "Romania is home to the Palace of Parliament."
+  },
+  {
+    "id": "RUS",
+    "name": "Russia",
+    "normalizedName": "RUSSIA",
+    "lat": 61.5,
+    "lon": 105.3,
+    "continent": "Europe",
+    "flag": "🇷🇺",
+    "funFact": "Russia is the largest country in the world by area."
+  },
+  {
+    "id": "RWA",
+    "name": "Rwanda",
+    "normalizedName": "RWANDA",
+    "lat": -1.9,
+    "lon": 29.9,
+    "continent": "Africa",
+    "flag": "🇷🇼",
+    "funFact": "Rwanda is the most densely populated country in Africa."
+  },
+  {
+    "id": "SAU",
+    "name": "Saudi Arabia",
+    "normalizedName": "SAUDIARABIA",
+    "lat": 23.9,
+    "lon": 45.1,
+    "continent": "Asia",
+    "flag": "🇸🇦",
+    "funFact": "Saudi Arabia has no rivers."
+  },
+  {
+    "id": "SEN",
+    "name": "Senegal",
+    "normalizedName": "SENEGAL",
+    "lat": 14.5,
+    "lon": -14.5,
+    "continent": "Africa",
+    "flag": "🇸🇳",
+    "funFact": "Senegal is the westernmost country in Africa."
+  },
+  {
+    "id": "SRB",
+    "name": "Serbia",
+    "normalizedName": "SERBIA",
+    "lat": 44.0,
+    "lon": 21.0,
+    "continent": "Europe",
+    "flag": "🇷🇸",
+    "funFact": "Serbia is one of the oldest countries in Europe."
+  },
+  {
+    "id": "SLE",
+    "name": "Sierra Leone",
+    "normalizedName": "SIERRALEONE",
+    "lat": 8.5,
+    "lon": -11.8,
+    "continent": "Africa",
+    "flag": "🇸🇱",
+    "funFact": "Sierra Leone was named by Portuguese explorers."
+  },
+  {
+    "id": "SIN",
+    "name": "Singapore",
+    "normalizedName": "SINGAPORE",
+    "lat": 1.4,
+    "lon": 103.8,
+    "continent": "Asia",
+    "flag": "🇸🇬",
+    "funFact": "Singapore is one of only three surviving city-states."
+  },
+  {
+    "id": "SVK",
+    "name": "Slovakia",
+    "normalizedName": "SLOVAKIA",
+    "lat": 48.7,
+    "lon": 19.7,
+    "continent": "Europe",
+    "flag": "🇸🇰",
+    "funFact": "Slovakia has the most caves per km2 in the world."
+  },
+  {
+    "id": "SLO",
+    "name": "Slovenia",
+    "normalizedName": "SLOVENIA",
+    "lat": 46.1,
+    "lon": 14.8,
+    "continent": "Europe",
+    "flag": "🇸🇮",
+    "funFact": "Slovenia is one of the few countries whose name means 'the loved'."
+  },
+  {
+    "id": "SOM",
+    "name": "Somalia",
+    "normalizedName": "SOMALIA",
+    "lat": 5.2,
+    "lon": 46.2,
+    "continent": "Africa",
+    "flag": "🇸🇴",
+    "funFact": "Somalia has the longest coastline in Africa."
+  },
+  {
+    "id": "ZAF",
+    "name": "South Africa",
+    "normalizedName": "SOUTHAFRICA",
+    "lat": -30.6,
+    "lon": 22.9,
+    "continent": "Africa",
+    "flag": "🇿🇦",
+    "funFact": "South Africa is the only country with three capital cities."
+  },
+  {
+    "id": "SSD",
+    "name": "South Sudan",
+    "normalizedName": "SOUTHSUDAN",
+    "lat": 6.9,
+    "lon": 31.3,
+    "continent": "Africa",
+    "flag": "🇸🇸",
+    "funFact": "South Sudan became the newest country in the world in 2011."
+  },
+  {
+    "id": "ESP",
+    "name": "Spain",
+    "normalizedName": "SPAIN",
+    "lat": 40.5,
+    "lon": -3.7,
+    "continent": "Europe",
+    "flag": "🇪🇸",
+    "funFact": "Spain has the second-highest number of bars per capita in the world."
+  },
+  {
+    "id": "SRI",
+    "name": "Sri Lanka",
+    "normalizedName": "SRILANKA",
+    "lat": 7.9,
+    "lon": 80.8,
+    "continent": "Asia",
+    "flag": "🇱🇰",
+    "funFact": "Sri Lanka was known as Ceylon until 1972."
+  },
+  {
+    "id": "SDN",
+    "name": "Sudan",
+    "normalizedName": "SUDAN",
+    "lat": 12.9,
+    "lon": 30.2,
+    "continent": "Africa",
+    "flag": "🇸🇩",
+    "funFact": "Sudan was the largest country in Africa before South Sudan seceded."
+  },
+  {
+    "id": "SUR",
+    "name": "Suriname",
+    "normalizedName": "SURINAME",
+    "lat": 3.9,
+    "lon": -56.0,
+    "continent": "South America",
+    "flag": "🇸🇷",
+    "funFact": "Suriname is the smallest country in South America."
+  },
+  {
+    "id": "SWE",
+    "name": "Sweden",
+    "normalizedName": "SWEDEN",
+    "lat": 60.1,
+    "lon": 18.6,
+    "continent": "Europe",
+    "flag": "🇸🇪",
+    "funFact": "Sweden has the most islands of any country."
+  },
+  {
+    "id": "SUI",
+    "name": "Switzerland",
+    "normalizedName": "SWITZERLAND",
+    "lat": 46.8,
+    "lon": 8.2,
+    "continent": "Europe",
+    "flag": "🇨🇭",
+    "funFact": "Switzerland has no official capital."
+  },
+  {
+    "id": "SYR",
+    "name": "Syria",
+    "normalizedName": "SYRIA",
+    "lat": 34.8,
+    "lon": 39.0,
+    "continent": "Asia",
+    "flag": "🇸🇾",
+    "funFact": "Syria is home to one of the oldest cities — Damascus."
+  },
+  {
+    "id": "TWN",
+    "name": "Taiwan",
+    "normalizedName": "TAIWAN",
+    "lat": 23.7,
+    "lon": 121.0,
+    "continent": "Asia",
+    "flag": "🇹🇼",
+    "funFact": "Taiwan produces over 90% of the worlds semiconductor chips."
+  },
+  {
+    "id": "TJK",
+    "name": "Tajikistan",
+    "normalizedName": "TAJIKISTAN",
+    "lat": 38.9,
+    "lon": 71.0,
+    "continent": "Asia",
+    "flag": "🇹🇯",
+    "funFact": "Tajikistan has over 90% of the groundwater in Central Asia."
+  },
+  {
+    "id": "TAN",
+    "name": "Tanzania",
+    "normalizedName": "TANZANIA",
+    "lat": -6.4,
+    "lon": 34.9,
+    "continent": "Africa",
+    "flag": "🇹🇿",
+    "funFact": "Tanzania is home to Mount Kilimanjaro."
+  },
+  {
+    "id": "THA",
+    "name": "Thailand",
+    "normalizedName": "THAILAND",
+    "lat": 15.9,
+    "lon": 100.9,
+    "continent": "Asia",
+    "flag": "🇹🇭",
+    "funFact": "Thailand is the only Southeast Asian country never colonized."
+  },
+  {
+    "id": "TLS",
+    "name": "Timor-Leste",
+    "normalizedName": "TIMORLESTE",
+    "lat": -8.9,
+    "lon": 125.9,
+    "continent": "Asia",
+    "flag": "🇹🇱",
+    "funFact": "Timor-Leste is the newest country in Asia, gaining independence in 2002."
+  },
+  {
+    "id": "TOG",
+    "name": "Togo",
+    "normalizedName": "TOGO",
+    "lat": 8.6,
+    "lon": 1.0,
+    "continent": "Africa",
+    "flag": "🇹🇬",
+    "funFact": "Togo is one of the longest thin countries in the world."
+  },
+  {
+    "id": "TUN",
+    "name": "Tunisia",
+    "normalizedName": "TUNISIA",
+    "lat": 33.9,
+    "lon": 9.5,
+    "continent": "Africa",
+    "flag": "🇹🇳",
+    "funFact": "Tunisia is the northernmost country in Africa."
+  },
+  {
+    "id": "TUR",
+    "name": "Turkey",
+    "normalizedName": "TURKEY",
+    "lat": 38.9,
+    "lon": 35.2,
+    "continent": "Asia",
+    "flag": "🇹🇷",
+    "funFact": "Turkey spans two continents — Europe and Asia."
+  },
+  {
+    "id": "TKM",
+    "name": "Turkmenistan",
+    "normalizedName": "TURKMENISTAN",
+    "lat": 40.0,
+    "lon": 59.0,
+    "continent": "Asia",
+    "flag": "🇹🇲",
+    "funFact": "Turkmenistan has the Gates of Hell."
+  },
+  {
+    "id": "UGA",
+    "name": "Uganda",
+    "normalizedName": "UGANDA",
+    "lat": 1.4,
+    "lon": 32.3,
+    "continent": "Africa",
+    "flag": "🇺🇬",
+    "funFact": "Uganda has the tallest mountain range in Africa."
+  },
+  {
+    "id": "UKR",
+    "name": "Ukraine",
+    "normalizedName": "UKRAINE",
+    "lat": 48.4,
+    "lon": 31.2,
+    "continent": "Europe",
+    "flag": "🇺🇦",
+    "funFact": "Ukraine has the deepest metro station in the world."
+  },
+  {
+    "id": "UAE",
+    "name": "UAE",
+    "normalizedName": "UNITEDARABEMIRATES",
+    "lat": 23.4,
+    "lon": 53.8,
+    "continent": "Asia",
+    "flag": "🇦🇪",
+    "funFact": "The UAE has no income tax."
+  },
+  {
+    "id": "GBR",
+    "name": "UK",
+    "normalizedName": "UNITEDKINGDOM",
+    "lat": 55.4,
+    "lon": -3.4,
+    "continent": "Europe",
+    "flag": "🇬🇧",
+    "funFact": "The UK has no written constitution."
+  },
+  {
+    "id": "USA",
+    "name": "United States",
+    "normalizedName": "UNITEDSTATES",
+    "lat": 37.1,
+    "lon": -95.7,
+    "continent": "North America",
+    "flag": "🇺🇸",
+    "funFact": "The US has no official language at the federal level."
+  },
+  {
+    "id": "URU",
+    "name": "Uruguay",
+    "normalizedName": "URUGUAY",
+    "lat": -32.5,
+    "lon": -55.8,
+    "continent": "South America",
+    "flag": "🇺🇾",
+    "funFact": "Uruguay was the first country to host a FIFA World Cup."
+  },
+  {
+    "id": "UZB",
+    "name": "Uzbekistan",
+    "normalizedName": "UZBEKISTAN",
+    "lat": 41.4,
+    "lon": 64.6,
+    "continent": "Asia",
+    "flag": "🇺🇿",
+    "funFact": "Uzbekistan has one of the oldest written languages."
+  },
+  {
+    "id": "VEN",
+    "name": "Venezuela",
+    "normalizedName": "VENEZUELA",
+    "lat": 6.4,
+    "lon": -66.6,
+    "continent": "South America",
+    "flag": "🇻🇪",
+    "funFact": "Venezuela has the largest proven oil reserves in the world."
+  },
+  {
+    "id": "VIE",
+    "name": "Vietnam",
+    "normalizedName": "VIETNAM",
+    "lat": 14.1,
+    "lon": 108.3,
+    "continent": "Asia",
+    "flag": "🇻🇳",
+    "funFact": "Vietnam has the largest cave in the world."
+  },
+  {
+    "id": "YEM",
+    "name": "Yemen",
+    "normalizedName": "YEMEN",
+    "lat": 15.6,
+    "lon": 48.5,
+    "continent": "Asia",
+    "flag": "🇾🇪",
+    "funFact": "Yemen has not had a drop of rain for years in some places."
+  },
+  {
+    "id": "ZAM",
+    "name": "Zambia",
+    "normalizedName": "ZAMBIA",
+    "lat": -13.1,
+    "lon": 27.8,
+    "continent": "Africa",
+    "flag": "🇿🇲",
+    "funFact": "Zambia was named after the Zambezi River."
+  },
+  {
+    "id": "ZIM",
+    "name": "Zimbabwe",
+    "normalizedName": "ZIMBABWE",
+    "lat": -19.0,
+    "lon": 29.2,
+    "continent": "Africa",
+    "flag": "🇿🇼",
+    "funFact": "Zimbabwe has Victoria Falls."
+  }
+]
