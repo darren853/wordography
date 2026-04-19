@@ -608,16 +608,6 @@ npx serve -l 3000 .
             <p>You cannot switch from Direct Upload to Git integration (or vice versa) after creation — you must delete and recreate the project.</p>
         </div>
 
-        <h3>⚠️ mobozed.com Zone Requirement</h3>
-        <div class="card">
-            <p><code>wordography.mobozed.com</code> can only be added as a custom domain if <code>mobozed.com</code> is a zone in the Cloudflare account. Currently <code>mobozed.com</code> is registered at <code>reg123.co.uk</code> with just a CNAME pointing to Cloudflare Pages — it is NOT a Cloudflare zone. This means:</p>
-            <ul style="margin: 10px 20px; color: var(--text-muted);">
-                <li><code>wordography.pages.dev</code> — always works (Cloudflare-managed)</li>
-                <li><code>wordography.mobozed.com</code> — works via CNAME at reg123.co.uk; the "Add custom domain" flow in Cloudflare dashboard may fail with "zone not found"</li>
-            </ul>
-            <p style="margin-top:10px;">To enable full custom domain management in Cloudflare, add <code>mobozed.com</code> as a site in the Cloudflare dashboard (Add a site → enter <code>mobozed.com</code> → add the TXT record Cloudflare provides at reg123.co.uk to verify ownership).</p>
-        </div>
-
         <h3>Deploy Process</h3>
         <pre><code># 1. Make changes to the game files
 cd ~/workspace/wordography
