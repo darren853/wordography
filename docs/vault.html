@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaultwarden — Self-Hosted Password Manager</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #0a0a0a;
+            --green: #00ff88;
+            --blue: #0088ff;
+            --orange: #ff6600;
+            --text: #ffffff;
+            --text-muted: #888888;
+            --card-bg: #111111;
+            --card-border: #222222;
+            --code-bg: #0d1117;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--primary); color: var(--text); line-height: 1.7; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        header { background: var(--secondary); padding: 30px; border-bottom: 3px solid var(--green); margin-bottom: 40px; }
+        header h1 { font-size: 2rem; margin-bottom: 10px; }
+        header .brand { font-weight: 700; }
+        header .brand span.mo { color: var(--blue); }
+        header .brand span.bo { color: var(--green); }
+        header .brand span.zed { color: var(--orange); }
+        h2 { color: var(--green); font-size: 1.4rem; margin: 40px 0 20px 0; border-bottom: 1px solid var(--card-border); padding-bottom: 10px; }
+        h3 { color: var(--text); margin: 25px 0 10px 0; }
+        p { margin-bottom: 15px; }
+        .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .card h4 { color: var(--green); margin-bottom: 10px; }
+        code { background: var(--code-bg); padding: 2px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.9em; color: var(--orange); }
+        pre { background: var(--code-bg); padding: 15px; border-radius: 8px; overflow-x: auto; margin: 15px 0; border-left: 3px solid var(--green); }
+        pre code { background: none; padding: 0; color: var(--text); }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 10px 15px; text-align: left; border-bottom: 1px solid var(--card-border); }
+        th { color: var(--green); border-bottom: 2px solid var(--green); }
+        td { color: var(--text-muted); }
+        .status { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+        .status.live { background: #1a4d2e; color: var(--green); }
+        .status.note { background: #3d2e1a; color: var(--orange); }
+        .warning { background: #3d1a1a; border: 1px solid #5c2c2c; border-radius: 8px; padding: 15px; margin: 15px 0; }
+        .warning strong { color: #ff6b6b; }
+        a { color: var(--blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--card-border); margin-top: 60px; }
+        footer a { color: var(--blue); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--blue); text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <p class="brand"><span class="mo">Mo</span><span class="bo">Bo</span><span class="zed">Zed</span></p>
+        <h1>Vaultwarden</h1>
+        <p>Self-Hosted Password Manager — Running on Horizon</p>
+        <p style="margin-top:10px;"><span class="status live">🟢 LIVE</span> <span style="color:var(--text-muted); font-size:0.85rem; margin-left:10px;">URL: <code>https://192.168.0.2:8443</code></span></p>
+    </header>
+
+    <h2>Overview</h2>
+    <p>Vaultwarden is a self-hosted, Bitwarden-compatible password manager running on <strong>Horizon</strong> at <code>https://192.168.0.2:8443</code>. It provides secure, local credential storage for all MoBoZed services — eliminating the need to store passwords in docs or memory files.</p>
+
+    <div class="card">
+        <h4>Key Details</h4>
+        <table>
+            <tbody>
+                <tr><td style="width:200px;"><strong>URL</strong></td><td><code>https://192.168.0.2:8443</code></td></tr>
+                <tr><td><strong>Vault Master Password</strong></td><td>Stored in Vaultwarden — log in to access</td></tr>
+                <tr><td><strong>Storage</strong></td><td><code>/mnt/Content/docker-data/vaultwarden/data/</code> (on NAS)</td></tr>
+                <tr><td><strong>Auto-start</strong></td><td><code>restart: unless-stopped</code> — starts automatically on server boot</td></tr>
+                <tr><td><strong>Proxy</strong></td><td>Caddy (HTTPS on :8443, self-signed cert)</td></tr>
+                <tr><td><strong>Web Vault Version</strong></td><td>2026.2.0</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="warning">
+        <strong>⚠️ Vault Master Password:</strong> The vault master password is the same as your Cloudflare/GitHub password: <code>Kodapup12345!</code>. If you forget it, the vault cannot be recovered. Keep it safe.
+    </div>
+
+    <h2>Architecture</h2>
+    <p>Vaultwarden runs as a Docker container on Horizon, proxied through Caddy for HTTPS:</p>
+
+    <pre><code>Internet/HTTPS → Caddy (:8443, self-signed cert) → Vaultwarden (:80)
+         ↓
+    /mnt/Content/docker-data/vaultwarden/data/  (on NAS)</code></pre>
+
+    <h3>Components</h3>
+    <table>
+        <thead><tr><th>Component</th><th>Port</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td>Vaultwarden (Docker)</td><td>:8282 (internal)</td><td>Bitwarden-compatible API + web vault</td></tr>
+            <tr><td>Caddy (TLS proxy)</td><td>:8443 (HTTPS)</td><td>Routes HTTPS traffic to Vaultwarden</td></tr>
+            <tr><td>Data volume</td><td>NAS</td><td>Persistently stored at /mnt/Content/docker-data/vaultwarden/</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Docker Compose</h3>
+    <pre><code># Location: /home/darren/vaultwarden/docker-compose.yml
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: unless-stopped
+    ports:
+      - "8282:80"
+    volumes:
+      - /home/darren/vaultwarden/data:/data
+    environment:
+      - ADMIN_TOKEN=darren-vault-2026-04-19
+      - SIGNUPS_ALLOWED=false
+      - INVITATIONS_ALLOWED=false
+      - WEB_VAULT_ENABLED=true</code></pre>
+
+    <h2>Bob's Credential Management (Agent Access)</h2>
+    <p>Bob (the AI agent) uses the <code>vault-cred</code> skill to read and write credentials. <strong>Always use the vault for credentials — never store them in docs or memory files.</strong></p>
+
+    <h3>Commands</h3>
+    <pre><code># List all credentials
+vault-cred.sh list
+
+# Get a specific credential
+vault-cred.sh get "GitHub"
+vault-cred.sh get "Cloudflare Account"
+
+# Create a new credential
+vault-cred.sh create "Item Name" "username" "password" "optional notes"</code></pre>
+
+    <h3>Credential Storage (Bob's Vault)</h3>
+    <table>
+        <thead><tr><th>Name</th><th>Username</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td>Cloudflare Account</td><td>darren@mobozed.com</td><td>Also in vault — retrieve via vault-cred</td></tr>
+            <tr><td>Cloudflare API Token</td><td>cfut_BYqfpA... (API token)</td><td>Also in vault — retrieve via vault-cred</td></tr>
+            <tr><td>GitHub</td><td>darren853</td><td>Also in vault — retrieve via vault-cred</td></tr>
+        </tbody>
+    </table>
+
+    <h2>First-Time Setup</h2>
+    <p>If this is a fresh install and signups are disabled:</p>
+    <pre><code># Temporarily enable signups (run on Horizon):
+ssh darren@192.168.0.2
+cd /home/darren/vaultwarden
+sed -i 's/SIGNUPS_ALLOWED=false/SIGNUPS_ALLOWED=true/' docker-compose.yml
+docker compose up -d
+
+# Create account at https://192.168.0.2:8443
+# Then disable signups:
+sed -i 's/SIGNUPS_ALLOWED=true/SIGNUPS_ALLOWED=false/' docker-compose.yml
+docker compose up -d</code></pre>
+
+    <h2>Maintenance</h2>
+    <h3>Restart Vaultwarden</h3>
+    <pre><code>ssh darren@192.168.0.2
+docker restart vaultwarden</code></pre>
+
+    <h3>View Logs</h3>
+    <pre><code>ssh darren@192.168.0.2
+docker logs vaultwarden --tail 30</code></pre>
+
+    <h3>Update Image</h3>
+    <pre><code>ssh darren@192.168.0.2
+cd /home/darren/vaultwarden
+docker pull vaultwarden/server:latest
+docker compose up -d</code></pre>
+
+    <h2>Troubleshooting</h2>
+    <table>
+        <thead><tr><th>Problem</th><th>Fix</th></tr></thead>
+        <tbody>
+            <tr><td>Page shows spinning circle &gt;3 min on first load</td><td>WASM compilation — normal on first visit. Refresh and it loads in seconds.</td></tr>
+            <tr><td>Caddy returning errors after restart</td><td>Run: <code>ssh darren@192.168.0.2 "sudo pkill caddy; sudo caddy run --config /etc/caddy/Caddyfile &amp;"</code></td></tr>
+            <tr><td>CLI sync fails with "self-signed cert"</td><td>Ensure <code>NODE_EXTRA_CA_CERTS=/tmp/vault.crt</code> is set</td></tr>
+            <tr><td>Vault returns 401 Unauthorized</td><td>Session expired — re-unlock with <code>vault-cred.sh unlock</code></td></tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p><span class="brand"><span class="mo">Mo</span><span class="bo">Bo</span><span class="zed">Zed</span></span> Media Portal</p>
+        <p style="margin-top:8px;"><a href="https://192.168.0.2:8443">Vaultwarden →</a> | <a href="/">Horizon Home →</a></p>
+    </footer>
+</div>
+</body>
+</html>
