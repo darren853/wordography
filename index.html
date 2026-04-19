@@ -653,7 +653,7 @@ function updateStats(won,guessCount,kmValues){
   if(won){s.won++;s.currentStreak++;s.maxStreak=Math.max(s.currentStreak,s.maxStreak);if(guessCount>=1&&guessCount<=6){s.guessDistribution[guessCount-1]++}}else{s.currentStreak=0}saveStats(s)
 }
 function renderGrid(){var g=document.getElementById('grid');g.innerHTML='';for(var row=0;row<5;row++){var wrap=document.createElement('div');wrap.className='grid-row-wrap';var geo=document.createElement('div');geo.className='geo-mini';geo.setAttribute('data-row',row);if(row<state.guesses.length){geo.classList.add('revealed');geo.innerHTML='<span class="darr">'+ARROWS[state.guesses[row].di]+'</span><span class="ddist">'+state.guesses[row].km.toLocaleString()+' km \u2014 '+distLabel(state.guesses[row].km)+'</span>'}wrap.appendChild(geo);var rowDiv=document.createElement('div');rowDiv.className='grid-row tile-row';rowDiv.setAttribute('data-row',row);var tileCount = TARGET_LEN;
-        var fw = Math.round((window.innerWidth - 108) / tileCount * 0.4);
+        var fw = Math.min(18, Math.round((window.innerWidth - 108) / tileCount * 0.4));
         for (var i = 0; i < tileCount; i++) {
           var t = document.createElement('div');
           t.className = 'tile';
