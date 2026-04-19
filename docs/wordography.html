@@ -538,6 +538,46 @@ npx serve -l 3000 .
     <section id="deployment">
         <h2>Deployment</h2>
 
+        <h3>🔐 Access Credentials</h3>
+        <div class="card">
+            <h4>Cloudflare Account + GitHub Login</h4>
+            <table>
+                <thead>
+                    <tr><th>Property</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Login email</td><td><code>darren@mobozed.com</code></td></tr>
+                    <tr><td>Password</td><td><code>[stored in 1Password — search "mobozed"]</code></td></tr>
+                    <tr><td>Cloudflare Account ID</td><td><code>b14ff78db90232b77775caa92b14dd20</code></td></tr>
+                </tbody>
+            </table>
+            <h4>Cloudflare API Token (for wrangler/GitHub Actions)</h4>
+            <table>
+                <thead>
+                    <tr><th>Property</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Token</td><td><code>[stored in GitHub Secrets — CLOUDFLARE_API_TOKEN]</code></td></tr>
+                    <tr><td>Type</td><td>User API Token (<code>cfut_</code> prefix)</td></tr>
+                    <tr><td>Permissions</td><td>Cloudflare Pages: Edit, Account Settings: Read, User Details: Read</td></tr>
+                    <tr><td>Created</td><td>2026-04-19 (replaced previous expired token)</td></tr>
+                </tbody>
+            </table>
+            <h4>GitHub</h4>
+            <table>
+                <thead>
+                    <tr><th>Property</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Owner</td><td><code>darren853</code></td></tr>
+                    <tr><td>Repo</td><td><code>https://github.com/darren853/wordography</code></td></tr>
+                    <tr><td>gh CLI auth</td><td>Logged in as <code>darren853</code> on BOB workstation</td></tr>
+                    <tr><td>Secret <code>CLOUDFLARE_API_TOKEN</code></td><td><code>[stored in GitHub Secrets — CLOUDFLARE_API_TOKEN]</code></td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:10px; color: var(--text-muted); font-size: 0.85rem;"><strong>Note:</strong> Actual secret values are stored in GitHub repository Secrets and 1Password. They are not printed in this document to avoid triggering GitHub secret scanning push protections.</p>
+        </div>
+
         <h3>Production (Cloudflare Pages + GitHub)</h3>
         <p>The game is hosted on Cloudflare Pages and auto-deploys from GitHub on every push.</p>
         <ul style="margin: 10px 20px; color: var(--text-muted);">
@@ -553,9 +593,30 @@ npx serve -l 3000 .
             <li>Project name: <code>wordography</code></li>
             <li>Source: GitHub (connected to <code>darren853/wordography</code>)</li>
             <li>Build command: <em>none</em> (static HTML — no build step)</li>
-            <li>Custom domain: <code>wordography.mobozed.com</code> via CNAME at <code>reg123.co.uk</code></li>
+            <li>Build output directory: <code>/</code> (root)</li>
+            <li>Production branch: <code>main</code></li>
+            <li>Custom domain: <code>wordography.mobozed.com</code></li>
+            <li>CNAME: <code>wordography.mobozed.com</code> → <code>wordography.pages.dev</code> (at <code>reg123.co.uk</code>, not Cloudflare DNS)</li>
         </ul>
-        <p>The CNAME at the registrar points <code>wordography.mobozed.com</code> → <code>wordography.pages.dev</code>. Cloudflare Pages provisions SSL automatically.</p>
+        <p>SSL is auto-provisioned by Cloudflare Pages. The domain registrar is <code>reg123.co.uk</code> (not Cloudflare Registrar) — the CNAME lives there.</p>
+
+        <h3>⚠️ Critical: Project Type — Pages vs Worker</h3>
+        <div class="card">
+            <h4>The "Connect to Git" Trap</h4>
+            <p>When recreating the Cloudflare Pages project, ensure you use <strong>"Connect to Git"</strong> from the Pages section, NOT from the Workers section. If you accidentally create it as a <strong>Worker</strong>, the URL will be <code>wordography.darren-b14.workers.dev</code> instead of <code>wordography.pages.dev</code>, and the project type will be wrong.</p>
+            <p style="margin-top:10px;">Correct path: Cloudflare dashboard → <strong>Workers & Pages</strong> → <strong>Create application</strong> → <strong>Pages</strong> → <strong>Connect to Git</strong></p>
+            <p>You cannot switch from Direct Upload to Git integration (or vice versa) after creation — you must delete and recreate the project.</p>
+        </div>
+
+        <h3>⚠️ mobozed.com Zone Requirement</h3>
+        <div class="card">
+            <p><code>wordography.mobozed.com</code> can only be added as a custom domain if <code>mobozed.com</code> is a zone in the Cloudflare account. Currently <code>mobozed.com</code> is registered at <code>reg123.co.uk</code> with just a CNAME pointing to Cloudflare Pages — it is NOT a Cloudflare zone. This means:</p>
+            <ul style="margin: 10px 20px; color: var(--text-muted);">
+                <li><code>wordography.pages.dev</code> — always works (Cloudflare-managed)</li>
+                <li><code>wordography.mobozed.com</code> — works via CNAME at reg123.co.uk; the "Add custom domain" flow in Cloudflare dashboard may fail with "zone not found"</li>
+            </ul>
+            <p style="margin-top:10px;">To enable full custom domain management in Cloudflare, add <code>mobozed.com</code> as a site in the Cloudflare dashboard (Add a site → enter <code>mobozed.com</code> → add the TXT record Cloudflare provides at reg123.co.uk to verify ownership).</p>
+        </div>
 
         <h3>Deploy Process</h3>
         <pre><code># 1. Make changes to the game files
@@ -611,12 +672,27 @@ rsync -avz --delete index.html darren@192.168.0.2:/var/www/horizon/wordography/
             <li><strong>Branch:</strong> <code>main</code></li>
             <li><strong>Auto-deploy:</strong> Every push to <code>main</code> triggers Cloudflare Pages deployment</li>
             <li><strong>Live URL:</strong> <a href="https://wordography.mobozed.com">https://wordography.mobozed.com</a></li>
+            <li><strong>GitHub Secret <code>CLOUDFLARE_API_TOKEN</code></strong>: stored in repo Settings → Secrets → Actions</li>
         </ul>
-        <p>The <code>docs/wordography.html</code> in this repo is the developer/user documentation. It is deployed to:</p>
-        <ul style="margin: 10px 20px; color: var(--text-muted);">
-            <li><strong>Horizon (local):</strong> <code>/var/www/horizon/docs/wordography.html</code></li>
-            <li><strong>Production:</strong> Synced separately to Horizon server via SCP</li>
-        </ul>
+        <p>The <code>docs/wordography.html</code> in this repo is the developer/user documentation. Credentials (API tokens, passwords) are stored in GitHub Secrets and 1Password — see the 🔐 Access Credentials section above.</p>
+
+        <h3>Local Workspace (BOB Workstation)</h3>
+        <pre><code>/Users/bob/workspace/wordography/
+├── index.html            # Main game (~577KB, single file)
+├── docs/
+│   └── wordography.html  # This documentation
+├── SPEC-*.md             # Design/specification docs
+└── .github/
+    └── workflows/
+        └── deploy.yml    # (legacy — Cloudflare Git integration now handles deploys)</code></pre>
+
+        <h3>Sync to Horizon (Local)</h3>
+        <p>After pushing changes to GitHub, also update Horizon to keep local docs in sync:</p>
+        <pre><code># Sync game to Horizon:
+rsync -avz --delete /Users/bob/workspace/wordography/index.html darren@192.168.0.2:/var/www/horizon/wordography/
+
+# Sync docs to Horizon:
+rsync -avz /Users/bob/workspace/wordography/docs/wordography.html darren@192.168.0.2:/var/www/horizon/docs/</code></pre>
     </section>
 
     <footer>
