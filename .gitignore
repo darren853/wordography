@@ -1,0 +1,17 @@
+# DEFAULT DENY — block everything
+*
+
+# ALLOW: Only these exact game source files
+!index.html
+!countries.json
+!build.js
+!build.py
+!gen.js
+!generate.js
+!make_html.py
+!start.sh
+
+# ALLOW: GitHub Actions workflow (required for Cloudflare Pages deploy)
+!.github
+!.github/workflows
+!.github/workflows/deploy.yml
