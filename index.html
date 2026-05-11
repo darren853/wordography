@@ -345,7 +345,7 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;padding:10px 8
     if(!window._silImgs)window._silImgs={};
     if(!window._silImgs[iso3]){var i=new Image();i.src=imgData;window._silImgs[iso3]=i}
     var silImg=window._silImgs[iso3];
-    if(!silImg.complete||!silImg.naturalWidth){silImg.onload=function(){window.renderTargetMap(iso3)};canvas.style.display='none';return}
+    if(!silImg.complete||!silImg.naturalWidth){silImg.onload=function(){window.renderTargetMap(iso3)};canvas.style.display='block';return}
     canvas.style.display='block';
     var iw=silImg.naturalWidth,ih=silImg.naturalHeight;
     var scale=W/iw*0.90;
