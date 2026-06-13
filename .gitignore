@@ -26,5 +26,8 @@
 !cloudflare-pages.json
 
 # ALLOW: Cloudflare Pages Functions (Umami proxy)
+# ALLOW: Cloudflare Pages Functions (Umami proxy tracker)
 !functions/
+!functions/script.js
 !functions/umami.js
+!functions/_headers

@@ -1,3 +1,8 @@
+// Umami event proxy - forwards events to analytics.snappydo.xyz
+// Makes event tracking first-party to wordography.pages.dev
+
+const UMAMI_API = 'https://analytics.snappydo.xyz/api/send';
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   
@@ -24,8 +29,7 @@ export async function onRequest(context) {
     return new Response('Bad Request', { status: 400 });
   }
 
-  // Forward to real Umami server via Cloudflare Tunnel
-  const umamiResponse = await fetch('https://analytics.snappydo.xyz/api/send', {
+  const umamiResponse = await fetch(UMAMI_API, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

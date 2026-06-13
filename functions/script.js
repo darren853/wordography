@@ -1,30 +1,35 @@
-export async function onRequest(context) {
-  const url = new URL(context.request.url);
-  const cacheKey = 'umami-script-v2';
-  const cache = caches.default;
+// Umami proxy script - serves cached Umami tracker from analytics.snappydo.xyz
+// Makes tracker first-party to wordography.pages.dev
 
-  let response = await cache.match(cacheKey);
+const UMAMI_URL = 'https://analytics.snappydo.xyz/script.js';
+const CACHE_KEY = 'umami-script-v1';
+const CACHE_TTL = 86400; // 24 hours
+
+export async function onRequest(context) {
+  const cache = caches.default;
+  let response = await cache.match(CACHE_KEY);
+  
   if (!response) {
-    response = await fetch('https://analytics.snappydo.xyz/script.js', {
-      cf: { cacheEverything: true, cacheTtl: 86400 }
+    response = await fetch(UMAMI_URL, {
+      cf: { cacheEverything: true, cacheTtl: CACHE_TTL }
     });
+    
     const body = await response.text();
-    // Rewrite Umami's own API calls to go through our proxy
-    // The script makes POSTs to /api/send and may reference the Umami hostname
-    const modified = body
-      .replace(/\.analytics\.snappydo\.xyz/g, '')
-      .replace(/https?:\/\/analytics\.snappydo\.xyz\//g, '/')
-      .replace(/analytics\.snappydo\.xyz/g, '');
-    response = new Response(modified, {
+    // Rewrite internal references
+    const rewritten = body
+      .replace(/https:\/\/analytics\.snappydo\.xyz\//g, '/')
+      .replace(/analytics\.snappydo\.xyz/g, 'wordography.pages.dev');
+    
+    response = new Response(rewritten, {
       headers: {
-        'Content-Type': 'application/javascript; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+        'Content-Type': 'application/javascript; charset=UTF-8',
+        'Cache-Control': 'public, max-age=86400',
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
       }
     });
-    context.waitUntil(cache.put(cacheKey, response.clone()));
+    
+    await cache.put(CACHE_KEY, response.clone());
   }
+  
   return response;
 }
