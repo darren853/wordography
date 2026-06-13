@@ -21,6 +21,9 @@ jobs:
       - name: Install wrangler
         run: npm install -g wrangler
         
+      - name: Build Wordography
+        run: node build.js
+        
       - name: Deploy to Cloudflare Pages
         run: |
           wrangler pages deploy . \
