@@ -1,4 +1,0 @@
-{
-  "build_command": "node build.js",
-  "functions_directory": "functions"
-}

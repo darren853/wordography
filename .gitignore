@@ -1,33 +1,6 @@
-# DEFAULT DENY — block everything
-*
-
-# ALLOW: Only these exact game source files
-!index.html
-!countries.json
-!build.js
-!build.py
-!gen.js
-!generate.js
-!make_html.py
-!start.sh
-
-# ALLOW: GitHub Actions workflow (required for Cloudflare Pages deploy)
-!.github
-!.github/workflows
-!.github/workflows/deploy.yml
-
-# ALLOW: Cloudflare Pages Functions (Umami proxy tracker)
-!proxy/
-!proxy/script.js
-!proxy/_headers
-!proxy/_redirects
-!proxy/api/
-!umami.js
-!cloudflare-pages.json
-
-# ALLOW: Cloudflare Pages Functions (Umami proxy)
-# ALLOW: Cloudflare Pages Functions (Umami proxy tracker)
-!functions/
-!functions/script.js
-!functions/umami.js
-!functions/_headers
+node_modules/
+**/node_modules/
+**/dist/
+*.tsbuildinfo
+.env
+.DS_Store
