@@ -24,3 +24,7 @@
 !proxy/api/
 !umami.js
 !cloudflare-pages.json
+
+# ALLOW: Cloudflare Pages Functions (Umami proxy)
+!functions/
+!functions/umami.js
