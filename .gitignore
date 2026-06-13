@@ -22,5 +22,5 @@
 !proxy/_headers
 !proxy/_redirects
 !proxy/api/
-!proxy/api/umami.js
+!proxy/umami.js
 !cloudflare-pages.json

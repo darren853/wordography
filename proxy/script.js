@@ -10,7 +10,7 @@ export async function onRequest(context) {
     });
     const body = await response.text();
     // Rewrite Umami's own API calls to go through our proxy
-    // The script makes POSTs to /proxy/api/umami and may reference the Umami hostname
+    // The script makes POSTs to /proxy/umami and may reference the Umami hostname
     const modified = body
       .replace(/\.analytics\.snappydo\.xyz/g, '')
       .replace(/https?:\/\/analytics\.snappydo\.xyz\//g, '/')
