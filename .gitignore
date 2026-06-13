@@ -15,3 +15,11 @@
 !.github
 !.github/workflows
 !.github/workflows/deploy.yml
+
+# ALLOW: Cloudflare Pages Functions (Umami proxy tracker)
+!functions/
+!functions/script.js
+!functions/_headers
+!functions/_redirects
+!functions/api/
+!functions/api/send.js
